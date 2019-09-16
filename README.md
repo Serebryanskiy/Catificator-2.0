@@ -6,7 +6,7 @@ An elegant android application with which a user can take a photo and figure out
 
 ## Dataset
 
-The Google Open Image V5 dataset has been chosen for this application. The whole dataset covers 6000 categories and ~9 million images with total size of 18TB. We have chosen a Subset with Bounding Boxes (600 classes with total size of 561GB) as the  specific images can be [downloaded](https://storage.googleapis.com/openimages/web/download.html) directly in the subset. 
+The Google Open Image V5 dataset has been chosen for this application. The whole dataset covers 6000 categories and ~9 million images with total size of 18TB. We have chosen a Subset with Bounding Boxes (600 classes with total size of 561GB) as the  specific images can be [downloaded](https://storage.googleapis.com/openimages/web/download.html) directly from the subset. 
 
 There are two reasons taken into account for choice of OIV5. The first one is that the dimensions of images are high enough to train a network with a relativity large input shape. (The Images in a dataset have 1024x600 dimensions on average). The second reason is to have non-cat class images that more likely can represent an average cell phone photo image.  Subset with Bounding Boxes has 600 classes with majority in such classes as Person, Land vehicle, Furniture, Food, and Building.
 
