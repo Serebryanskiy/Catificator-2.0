@@ -228,3 +228,4 @@ We’ll use TensorFlowLite to plug in our ML model to Android. The whole process
 * Get and display classification probabilities
 
 <img src="images/am_i_cat.png?raw=true" />
+![ScreenShot](https://github.com/Serebryanskiy/Catificator-2.0/raw/master/images/am_i_cat.jpg)
