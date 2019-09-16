@@ -21,7 +21,7 @@ Steps to construct training dataset from Subset with Bounding Boxes:
 
 Or you can simply explore and [download](https://drive.google.com/drive/folders/1bKuF3p7DAhR7fvZwLdivT2ZFUCNjJzAK) constructed dataset from Google Drive. 
 
-## Mode
+## Model
 There is always a trade-off between costs spent for a model training and the quality of a model. A practical approach is to use transfer learning — transferring the network weights trained on a previous task like ImageNet to a new task — to adapt a pre-trained deep classifier to our own requirements.
 In our app we are going to use transfer learning using Keras. One thing we need to take into account when making mobile application is the size of a model and it’s efficiency. Let’s look at the following table with models specs.
 
@@ -217,6 +217,12 @@ The model training is implemented in jupyter [notebook](./training_model.ipynb).
 * Convert selected model to TFLite Flatbuffe for mobile application.
 
 We managed to get 98.5% accuracy on validation set and 98.1% accuracy on test set. There are ways to improve accuracy even further, but it’s good enough for that type of application
+
+## Hardware 
+
+Google cloud instance:
+n1-highmem-8 (8 vCPUs, 52 GB memory)
+1 x NVIDIA Tesla P100
 
 ## Android application 
 
