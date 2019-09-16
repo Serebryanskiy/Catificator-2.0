@@ -21,9 +21,11 @@ Steps to construct training dataset from Subset with Bounding Boxes:
 
 Or you can simply explore and [download](https://drive.google.com/drive/folders/1bKuF3p7DAhR7fvZwLdivT2ZFUCNjJzAK) constructed dataset from Google Drive. 
 
-## The model
+## Mode
+There is always a trade-off between costs spent for a model training and the quality of a model. A practical approach is to use transfer learning — transferring the network weights trained on a previous task like ImageNet to a new task — to adapt a pre-trained deep classifier to our own requirements.
+In our app we are going to use transfer learning using Keras. One thing we need to take into account when making mobile application is the size of a model and it’s efficiency. Let’s look at the following table with models specs.
+
 <hr />
-<h1 id="documentation-for-individual-models">Documentation for individual models</h1>
 <table>
 <thead>
 <tr>
@@ -201,4 +203,28 @@ Or you can simply explore and [download](https://drive.google.com/drive/folders/
 <p>The top-1 and top-5 accuracy refers to the model's performance on the ImageNet validation dataset.</p>
 <p>Depth refers to the topological depth of the network. This includes activation layers, batch normalization layers etc.</p>
 <hr />
- 
+
+If we would carefully examine the table we can find out that Xception model size is only 88 Mb while it has one of the best performances. Taking that into account we choose Xception model as our base model.
+
+The model training is implemented in python [notebook](./training_model.ipynb). Short description of model training steps:
+* Set input size and batch size.
+* Preprocess images using Keras ImageDataGenerator (actually preprocessing is done only at the beginning of training)
+* Load Imagenet pretrained Xception model
+* Freeze first 110 layers
+* Set ModelCheckpoint callback
+* Train the model (change params, repeat)
+* Select the best model and check it on test set
+* Convert selected model to TFLite Flatbuffe for mobile application.
+
+We managed to get 98.5% accuracy on validation set and 98.1% accuracy on test set. There are ways to improve accuracy even further, but it’s good enough for that type of application
+
+## Android application 
+
+We’ll use TensorFlowLite to plug in our ML model to Android. The whole process can be described in four steps: 
+
+* Get camera permission and take a photo
+* Preprocess bitmap to meet model’s input requirements
+* Feed preprocess bitmap to TensorFlow Lite
+* Get and display classification probabilities
+
+<img src="am_i_cat.png?raw=true" />
