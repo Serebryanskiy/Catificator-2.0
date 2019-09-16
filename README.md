@@ -206,7 +206,7 @@ In our app we are going to use transfer learning using Keras. One thing we need 
 
 If we would carefully examine the table we can find out that Xception model size is only 88 Mb while it has one of the best performances. Taking that into account we choose Xception model as our base model.
 
-The model training is implemented in python [notebook](./training_model.ipynb). Short description of model training steps:
+The model training is implemented in jupyter [notebook](./training_model.ipynb). Short description of model training steps:
 * Set input size and batch size.
 * Preprocess images using Keras ImageDataGenerator (actually preprocessing is done only at the beginning of training)
 * Load Imagenet pretrained Xception model
