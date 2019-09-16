@@ -221,9 +221,8 @@ We managed to get 98.5% accuracy on validation set and 98.1% accuracy on test se
 ## Hardware 
 
 Google cloud instance:
-n1-highmem-8 (8 vCPUs, 52 GB memory)
-
-1 x NVIDIA Tesla P100
+* n1-highmem-8 (8 vCPUs, 52 GB memory)
+* 1 x NVIDIA Tesla P100
 
 ## Android application 
 
