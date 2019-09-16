@@ -19,7 +19,7 @@ Steps to construct training dataset from Subset with Bounding Boxes:
 * Choose randomly 14025 images from test 
 * Make train, validation, test subsets as (70%/15%/15%)
 
-Or you can simply explore and [download](https://drive.google.com/drive/folders/1bKuF3p7DAhR7fvZwLdivT2ZFUCNjJzAK) constructed dataset from Google Drive. 
+Or you can simply explore and [download](https://drive.google.com/drive/folders/1bKuF3p7DAhR7fvZwLdivT2ZFUCNjJzAK) (8.31 GB) constructed dataset from Google Drive. 
 
 ## Model
 There is always a trade-off between costs spent for a model training and the quality of a model. A practical approach is to use transfer learning — transferring the network weights trained on a previous task like ImageNet to a new task — to adapt a pre-trained deep classifier to our own requirements.
