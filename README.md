@@ -259,7 +259,7 @@ git clone https://github.com/Serebryanskiy/Catificator-2.0.git
 
 Open the Catificator source code in Android Studio. To do this, open Android
 Studio and select `Open an existing project`, setting the folder to
-`examples/lite/examples/image_classification/android`
+`/Cats-android-TFLite/`
 
 <img src="images/classifydemo_img1.png?raw=true" />
 
