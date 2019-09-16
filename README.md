@@ -227,4 +227,4 @@ We’ll use TensorFlowLite to plug in our ML model to Android. The whole process
 * Feed preprocess bitmap to TensorFlow Lite
 * Get and display classification probabilities
 
-<img src="./am_i_cat.png?raw=true" />
+<img src="images/am_i_cat.png?raw=true" />
