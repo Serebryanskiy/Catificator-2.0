@@ -2,13 +2,13 @@
 
 Have you ever wondered whether this thing in your house is a cat or not? Well, now you can know for sure!
 
-An elegant android application with which a user can take a photo and figure out if there is a cat in it.
+An elegant android application with which a user can take a photo and figure out whether there is a cat in it.
 
 ## Dataset
 
-The Google Open Image V5 dataset has been chosen for this application. For the purpose of this application the Google Open Images V5 dataset has been chosen. The whole dataset covers 6000 categories and ~9 million images with total size of 18TB. We chose a Subset with Bounding Boxes (600 classes with total size of 561GB) as in the subset specific images can be downloaded directly. https://storage.googleapis.com/openimages/web/download.html
+The Google Open Image V5 dataset has been chosen for this application. The whole dataset covers 6000 categories and ~9 million images with total size of 18TB. We have chosen a Subset with Bounding Boxes (600 classes with total size of 561GB) as the  specific images can be downloaded directly in the subset. https://storage.googleapis.com/openimages/web/download.html
 
-There are two reasons taken into account for choosing OIV5. The first one is that the dimensions of images are high enough to train a network with a relativity large input shape. (The Images in a dataset have 1024x600 dimensions on average). The second reason is to have non-cat class images that more likely can represent an average cell phone photo image.  Subset with Bounding Boxes has 600 classes with majority in such classes as Person, Land vehicle, Furniture, Food, Building.
+There are two reasons taken into account for choice of OIV5. The first one is that the dimensions of images are high enough to train a network with a relativity large input shape. (The Images in a dataset have 1024x600 dimensions on average). The second reason is to have non-cat class images that more likely can represent an average cell phone photo image.  Subset with Bounding Boxes has 600 classes with majority in such classes as Person, Land vehicle, Furniture, Food, and Building.
 
 Steps to construct training dataset from Subset with Bounding Boxes:
 * [Download train image’s indexes csv](https://datasets.figure-eight.com/figure_eight_datasets/open-images/train-annotations-bbox.csv)
