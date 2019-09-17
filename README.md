@@ -204,9 +204,9 @@ In our app we are going to use transfer learning using Keras. One thing we need 
 <p>Depth refers to the topological depth of the network. This includes activation layers, batch normalization layers etc.</p>
 <hr />
 
-If we would carefully examine the table we can find out that Xception model size is only 88 Mb while it has one of the best performances. Taking that into account we choose Xception model as our base model.
+If we carefully examine the table, we will find out that Xception model size is only 88 Mb while it has one of the best performances. Taking that into account we choose Xception model as our base model.
 
-The model training is implemented in jupyter [notebook](./training_model.ipynb). Short description of model training steps:
+The model training is implemented in jupyter [notebook](./training_model.ipynb). Short description of the model training steps you can find below:
 * Set input size and batch size.
 * Preprocess images using Keras ImageDataGenerator (actually preprocessing is done only at the beginning of training)
 * Load Imagenet pretrained Xception model
@@ -216,7 +216,7 @@ The model training is implemented in jupyter [notebook](./training_model.ipynb).
 * Select the best model and check it on test set
 * Convert selected model to TFLite Flatbuffe for mobile application.
 
-We managed to get 98.5% accuracy on validation set and 98.1% accuracy on test set. There are ways to improve accuracy even further, but it’s good enough for that type of application
+We managed to get 98.5% accuracy on validation set and 98.1% accuracy on test set. There are ways to improve accuracy even further, but it’s good enough for that type of application.
 
 ## Hardware 
 
